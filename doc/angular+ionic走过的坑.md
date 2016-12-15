@@ -54,10 +54,15 @@
 
 	> 	$http({  
 	> 	   method:'post', 
+	> 	   
 	> 	   url:'post.php', 
+	> 	   
 	> 	   data:{name:"aaa",id:1,age:20} 
+	> 	   
 	> 	}).success(function(req){
+	> 	
 	> 	   console.log(req); 
+	> 	   
 	> 	})  
 	> 
 
