@@ -7,11 +7,23 @@
 
 # 坑的集合
 
-1. [flexble适配](https://github.com/huainanhai/flexible) 可以参考文档，不再赘述；
+1. [flexble适配](https://github.com/huainanhai/flexible) 
+
+	可以参考文档，不再赘述；
 
 2. 减少图片请求，制作spite 雪碧图
 
 	因为请求过多，导致时间过长；无论是ios还是安卓，都是以webview的方式请求远程的url，当所有的包都被下载后才会出现内容。每增加一个request 必将增加 waiting time;所以要尽可能减少请求；
+
+	**Plan A** 
+	
+	是可以借助工具[goPng](https://github.com/huainanhai/gopng)，这种方式不好地方，就是无节制的压缩空间，整体看起来很乱没有层理，pc端如果要用也是可以勉强用，手机端几乎是不能用，原因等下详述；
+
+	**Plan B**
+
+	手动通过photoshop精细合成。需要注意的是： 由于UI给的UI图都是@2X放大图，所以切得图也是2倍的；所以最好所有的diatace都是偶数，无论是距上还是距左；
+
+	这里额外推荐一个切图神器
 
 	
 
