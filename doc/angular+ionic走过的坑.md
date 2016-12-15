@@ -9,6 +9,8 @@
 
 1. [flexble适配](https://github.com/huainanhai/flexible) 
 
+	![](https://camo.githubusercontent.com/5ac077a46fc12456b71725f70cab904abcffb6e7/687474703a2f2f7777772e773363706c75732e636f6d2f73697465732f64656661756c742f66696c65732f626c6f67732f323031352f313531312f72656d2d312e6a7067)
+
 	可以参考文档，不再赘述；
 
 2. 减少图片请求，制作spite 雪碧图
@@ -23,7 +25,10 @@
 
 	手动通过photoshop精细合成。需要注意的是： 由于UI给的UI图都是@2X放大图，所以切得图也是2倍的；所以最好所有的diatace都是偶数，无论是距上还是距左；
 
-	这里额外推荐一个切图神器
+	这里额外推荐一个[切图神器](https://github.com/huainanhai/projectSummary/tree/master/tool)，打开photoshop alt+F9打开动作如图：
+	![](http://i.imgur.com/Rswa6Vv.png) 
+
+	把下载好的切图神器.atn拖到东西窗体内即安装成功，成功同如上图。其余操作的自己体会！
 
 	
 
