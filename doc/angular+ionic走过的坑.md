@@ -51,20 +51,19 @@
 
 
 	【原坑重现（例子）】运行代码：
+    
+   		 $http({
+      		method:'post',
+       		url:'post.php',
+       		data:{
+    	 		name:"aaa",
+    	 		id:1,
+    	 		age:20
+       		}
+   		 }).success(function(req) {
+       		console.log(req);
+    	});
 
-	> 	$http({  
-	> 	   method:'post', 
-	> 	   
-	> 	   url:'post.php', 
-	> 	   
-	> 	   data:{name:"aaa",id:1,age:20} 
-	> 	   
-	> 	}).success(function(req){
-	> 	
-	> 	   console.log(req); 
-	> 	   
-	> 	})  
-	> 
 
 	运行结果（chrome→network）：
 
