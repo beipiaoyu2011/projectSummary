@@ -23,16 +23,54 @@
 
 	**Plan B**
 
-	手动通过photoshop精细合成。需要注意的是： 由于UI给的UI图都是@2X放大图，所以切得图也是2倍的；所以最好所有的diatace都是偶数，无论是距上还是距左；
+	手动通过photoshop精细合成。需要注意的是： 由于UI给的UI图都是@2X放大图，所以切得图也是2倍的；所以最好所有的distace都是偶数，无论是距上还是距左；
 
 	这里额外推荐一个[切图神器](https://github.com/huainanhai/projectSummary/tree/master/tool)，打开photoshop alt+F9打开动作如图：
 
 
 	[![](http://i.imgur.com/Rswa6Vv.png)](https://github.com/huainanhai/projectSummary/tree/master/tool) 
 
-	把下载好的切图神器.atn拖到东西窗体内即安装成功，成功同如上图。其余操作的自己体会！
-
+	把下载好的[**切图神器.atn**](https://github.com/huainanhai/projectSummary/tree/master/tool)拖到动作窗体内即安装成功，成功同如上图。其余操作的自己体会！
+	
+	关于雪碧图背景定位优选一下方案：
 	[移动端适配之雪碧图(sprite)背景图片定位](http://www.jianshu.com/p/d3b19968a4c2)
+
+3. [**angularjs中$http模块POST请求request payload转form data**](http://www.360doc.com/content/15/0521/12/203871_472172841.shtml)
+	
+	在app.config()里面加上
+
+        $httpProvider.defaults.transformRequest = function(obj) {
+            var str = [];
+            for (var p in obj) {
+                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+            }
+            return str.join("&");
+        };
+
+
+
+
+	【原坑重现（例子）】运行代码：
+
+	> 	$http({  
+	> 	   method:'post', 
+	> 	   url:'post.php', 
+	> 	   data:{name:"aaa",id:1,age:20} 
+	> 	}).success(function(req){
+	> 	   console.log(req); 
+	> 	})  
+	> 
+
+	运行结果（chrome→network）：
+
+	![](http://image85.360doc.com/DownloadImg/2015/05/2112/53806604_1.jpg)
+
+	
+
+	
+
+	
+
 
 	
 
