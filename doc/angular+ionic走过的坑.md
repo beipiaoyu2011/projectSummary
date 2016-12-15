@@ -26,6 +26,8 @@
 	手动通过photoshop精细合成。需要注意的是： 由于UI给的UI图都是@2X放大图，所以切得图也是2倍的；所以最好所有的diatace都是偶数，无论是距上还是距左；
 
 	这里额外推荐一个[切图神器](https://github.com/huainanhai/projectSummary/tree/master/tool)，打开photoshop alt+F9打开动作如图：
+
+
 	[![](http://i.imgur.com/Rswa6Vv.png)](https://github.com/huainanhai/projectSummary/tree/master/tool) 
 
 	把下载好的切图神器.atn拖到东西窗体内即安装成功，成功同如上图。其余操作的自己体会！
