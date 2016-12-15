@@ -13,7 +13,7 @@
 
 	可以参考文档，不再赘述；
 
-2. 减少图片请求，制作spite 雪碧图
+2. 减少图片请求，制作sprite 雪碧图
 
 	因为请求过多，导致时间过长；无论是ios还是安卓，都是以webview的方式请求远程的url，当所有的包都被下载后才会出现内容。每增加一个request 必将增加 waiting time;所以要尽可能减少请求；
 
@@ -31,6 +31,8 @@
 	[![](http://i.imgur.com/Rswa6Vv.png)](https://github.com/huainanhai/projectSummary/tree/master/tool) 
 
 	把下载好的切图神器.atn拖到东西窗体内即安装成功，成功同如上图。其余操作的自己体会！
+
+	[移动端适配之雪碧图(sprite)背景图片定位](http://www.jianshu.com/p/d3b19968a4c2)
 
 	
 
