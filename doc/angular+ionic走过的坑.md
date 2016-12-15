@@ -77,7 +77,7 @@
 
 	解决方案：
 
-	1.配置$httpProvider：
+	a.配置$httpProvider：
 
 			var myApp = angular.module('app',[]);  
  			myApp.config(function($httpProvider){  
@@ -93,7 +93,7 @@
    				}; 
   			});  
 
-	2.在post中配置:
+	b.在post中配置:
 
 			$http({  
   				 method:'post',  
@@ -118,7 +118,11 @@
 
 	至此成功换成form data;
 
+4. [angularjs中错误总结](http://www.jianshu.com/p/85220470cbfe)
 
+5. 路由数据之间通信
+
+	除了通过stateParam 路由间传递（缺点是只是单向路由一次有效，再刷新浏览器参数不复存在）。还有 [Web Storage：浏览器端数据储存机制](http://javascript.ruanyifeng.com/bom/webstorage.html)
 	
 
 	
