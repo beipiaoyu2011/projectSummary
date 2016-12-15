@@ -124,13 +124,18 @@
 
 	除了通过stateParam 路由间传递（缺点是只是单向路由一次有效，再刷新浏览器参数不复存在）。还有 [Web Storage：浏览器端数据储存机制](http://javascript.ruanyifeng.com/bom/webstorage.html)
 	
-
+6. [ionic中定义路由的问题（嵌套路由）](http://www.cnblogs.com/gdhydx-ljm/p/5347852.html)
 	
-
+7. [Ionic 常见问题及解决方案 ](http://blog.csdn.net/molong421/article/details/51587853)
 	
+8. [angularjs学习总结 详细教程](http://blog.csdn.net/yy374864125/article/details/41349417) 
 
-
+9.	[如果滚动区域不会回滚：](https://zhidao.baidu.com/question/458435795.html?fr=iks&word=%3B-webkit-overflow-scrolling%3A+touch&ie=gbk)
 	
+	[WebKit私有的属性“-webkit-overflow-scrolling: touch”（允许独立的滚动区域和触摸回弹）；](https://zhidao.baidu.com/question/458435795.html?fr=iks&word=%3B-webkit-overflow-scrolling%3A+touch&ie=gbk) 
+
+
+		
 
 
 
