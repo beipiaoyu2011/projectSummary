@@ -46,6 +46,10 @@
             }
             return str.join("&");
         };
+		$httpProvider.defaults.headers.post = {
+           'Content-Type': 'application/x-www-form-urlencoded'
+        };
+
 
 
 
@@ -68,6 +72,52 @@
 	运行结果（chrome→network）：
 
 	![](http://image85.360doc.com/DownloadImg/2015/05/2112/53806604_1.jpg)
+
+	这样的话在后端中用是取不到数据的。
+
+	解决方案：
+
+	1.配置$httpProvider：
+
+			var myApp = angular.module('app',[]);  
+ 			myApp.config(function($httpProvider){  
+     			$httpProvider.defaults.transformRequest = function(obj){  
+    				var str = [];  
+     				for(var p in obj){  
+       					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));  
+     				}  
+    			 return str.join("&");  
+   				};  
+     			$httpProvider.defaults.headers.post = {  
+        			'Content-Type': 'application/x-www-form-urlencoded'  
+   				}; 
+  			});  
+
+	2.在post中配置:
+
+			$http({  
+  				 method:'post',  
+  				 url:'post.php',  
+  				 data:{name:"aaa",id:1,age:20},  
+  				 headers:{'Content-Type': 'application/x-www-form-urlencoded'},  
+   				 transformRequest: function(obj) {  
+    				 var str = [];  
+    				 for(var p in obj){  
+       					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));  
+     				 }  
+    				 return str.join("&");  
+  				 }  
+				 }).success(function(req){  
+      				 console.log(req);  
+				 })  
+
+
+	运行结果（chrome→network）:
+
+	![](http://image85.360doc.com/DownloadImg/2015/05/2112/53806604_2.jpg)
+
+	至此成功换成form data;
+
 
 	
 
